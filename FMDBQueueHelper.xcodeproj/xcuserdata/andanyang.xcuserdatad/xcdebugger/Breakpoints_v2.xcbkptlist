@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FMDBQueueHelperTests/FMDBQueueHelperTests.swift"
+            timestampString = "525174703.511133"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FMDBQueueHelperTests.FMDBQueueHelperTests.(testExample () -&gt; ()).(closure #1)"
+                  moduleName = "FMDBQueueHelperTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andanyang/github/iOS/FMDBQueueHelper/FMDBQueueHelperTests/FMDBQueueHelperTests.swift"
+                  timestampString = "525229168.541014"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FMDBQueueHelperTests.FMDBQueueHelperTests.(testExample () -&gt; ()).(closure #1).(implicit closure #1)"
+                  moduleName = "FMDBQueueHelperTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andanyang/github/iOS/FMDBQueueHelper/FMDBQueueHelperTests/FMDBQueueHelperTests.swift"
+                  timestampString = "525229168.542553"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
