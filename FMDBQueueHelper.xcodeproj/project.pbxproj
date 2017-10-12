@@ -445,7 +445,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.luxcon.FMDBQueueHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FMDBQueueHelper/Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -459,7 +459,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.luxcon.FMDBQueueHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FMDBQueueHelper/Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -514,6 +514,7 @@
 				232A2AA31F4D7659004C770E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		232A2AA41F4D7659004C770E /* Build configuration list for PBXNativeTarget "FMDBQueueHelperTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +523,7 @@
 				232A2AA61F4D7659004C770E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

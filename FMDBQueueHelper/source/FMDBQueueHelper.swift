@@ -39,10 +39,10 @@ open class FMDBQueueHelper: NSObject {
         if let dbname = dbname,
             ShareInstance.dbName != dbname{
             
-            ShareInstance.openDB(dbName: dbname)
+            ShareInstance.openDBName(dbName: dbname)
         }else{
             if  ShareInstance.queue == nil{
-                ShareInstance.openDB(dbName: ShareInstance.dbName)
+                ShareInstance.openDBName(dbName: ShareInstance.dbName)
             }
             //ShareInstance.queue
         }
@@ -107,16 +107,36 @@ open class FMDBQueueHelper: NSObject {
     }
     
     ///打开当前数据库
-    open func openDB( dbName: String)  {
+    func openDBName( dbName: String)  {
         
         close()
         self.dbName = dbName
-        queue = FMDatabaseQueue(path: self.path + "/" + self.dbName + ".db")
+        var path = self.path + "/" + self.dbName //+ ".db"
+        if  dbName.contains("/"){
+            
+            // Substring
+            let dirs = dbName.split(separator: "/")
+            
+            
+            if dirs.count > 1{
+                let directory = dbName.subString(start: 0, length: dbName.count - dirs.last!.count)
+                
+                path = self.path.appending("/" + directory)
+                if !FileManager.default.isExecutableFile(atPath: path) {
+                    
+                    try? FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
+                }
+                
+                path = path.appending("/" + dirs.last!)
+            }
+            
+        }
+        
+        queue = FMDatabaseQueue(path:  path)
         db = queue.value(forKey: "_db") as! FMDatabase
         #if DEBUG
-            print("openDB databasePath" + (db.databasePath ?? " is nil"))
+            print("databasePath" + (db.databasePath ?? " is nil"))
         #endif
-        
     }
     
     /// 关闭当前数据库
@@ -130,5 +150,20 @@ open class FMDBQueueHelper: NSObject {
             //queue.openFlags = 0
         }
         
+    }
+    
+}
+
+extension String{
+    
+    func subString(start:Int, length:Int = -1)->String {
+        var len = length
+        if len == -1 {
+            len = characters.count - start
+        }
+        let st = characters.index(startIndex, offsetBy:start)
+        let en = characters.index(st, offsetBy:len)
+        let range = st ..< en
+        return String(self[range])
     }
 }
